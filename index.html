@@ -11,31 +11,43 @@
       background: #fdfdfd;
       color: #222;
     }
+
     header {
       display: flex;
-      align-items: flex-start;
       padding: 2rem;
       flex-wrap: wrap;
       gap: 1.5rem;
     }
+
     .header-left {
       display: flex;
       gap: 1.5rem;
+      align-items: stretch;
+      flex: 1;
     }
+
     .app-icon {
-      width: 96px;
-      height: auto;
-      align-self: flex-start;
-      margin-top: 0.2rem;
+      height: 144px;
+      width: auto;
+      object-fit: contain;
     }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .header-text h1 {
       font-size: 2rem;
       margin: 0;
     }
+
     .header-text p {
       margin: 0.5rem 0 0;
       color: #666;
     }
+
     .store-buttons img {
       height: 48px;
       margin-top: 1rem;
@@ -45,22 +57,26 @@
       padding: 2rem;
       background: #fff;
     }
+
     .features h2 {
       font-size: 1.75rem;
       margin-bottom: 1rem;
       color: #222;
     }
+
     .feature-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1rem;
     }
+
     .feature-item {
       background: #fafafa;
       padding: 1rem;
       border: 1px solid #eee;
       border-radius: 8px;
     }
+
     .feature-item::before {
       content: '✅';
       margin-right: 0.5rem;
@@ -69,15 +85,18 @@
     .screenshots {
       padding: 2rem;
     }
+
     .screenshots h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
+
     .screenshot-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
     }
+
     .screenshot-grid img {
       width: 100%;
       height: auto;
@@ -97,10 +116,16 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .app-icon {
+        height: auto;
+        width: 96px;
+      }
     }
   </style>
 </head>
 <body>
+
 <header>
   <div class="header-left">
     <img src="./assets/ic_app_launcher.png" alt="Movieland Icon" class="app-icon" />
@@ -144,6 +169,7 @@
 <footer>
   © 2023–2025 Movieland. All rights reserved.
 </footer>
+
 </body>
 </html>
 

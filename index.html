@@ -1,10 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Movieland Links</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movieland</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #222;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .app-icon {
+      width: 96px;
+      height: 96px;
+    }
+    .header-text h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .header-text p {
+      margin: 0.5rem 0 0;
+      color: #666;
+    }
+    .store-buttons img {
+      height: 48px;
+      margin-top: 1rem;
+    }
+    .features {
+      padding: 2rem;
+      background: #fff;
+    }
+    .features h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .feature-item {
+      background: #fafafa;
+      padding: 1rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+    .feature-item::before {
+      content: '✅';
+      margin-right: 0.5rem;
+    }
+    .screenshots {
+      padding: 2rem;
+    }
+    .screenshots h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .screenshot-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .screenshot-grid img {
+      width: 180px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-  <p>GitHub Pages is enabled. assetlinks.json should be accessible.</p>
+  <header>
+    <div class="header-left">
+      <img src="./ic_app_launcher.png" alt="Movieland Icon" class="app-icon" />
+      <div class="header-text">
+        <h1>Movieland</h1>
+        <p>Track trending movies & TV shows, manage your watchlist, and customize themes!</p>
+        <div class="store-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.github.af2905.movieland" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Get it on Google Play">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-list">
+      <div class="feature-item">Discover Trending Movies & TV Shows – Stay updated with the latest releases.</div>
+      <div class="feature-item">Create Your Watchlist – Save movies & shows you want to watch later.</div>
+      <div class="feature-item">Explore Cast & Crew Details – Learn more about your favorite celebrities.</div>
+      <div class="feature-item">Browse by Genre – Find movies & shows from different categories.</div>
+      <div class="feature-item">Customize Your Theme – Choose from multiple theme colors & modes.</div>
+      <div class="feature-item">Multi-Language Support – Available in 11+ languages including English, German, Spanish, and more.</div>
+    </div>
+  </section>
+
+  <section class="screenshots">
+    <h2>App Screenshots</h2>
+    <div class="screenshot-grid">
+      <img src="./Screenshot_20250328_093945.png" alt="Home Screenshot">
+      <img src="./Screenshot_20250328_094340.png" alt="Movie Detail Screenshot">
+      <img src="./Screenshot_20250328_094541.png" alt="Cast Screenshot">
+      <img src="./Screenshot_20250328_095350.png" alt="Search Screenshot">
+      <img src="./Screenshot_20250328_095734.png" alt="Watchlist Screenshot">
+      <img src="./Screenshot_20250328_100021.png" alt="TV Show Screenshot">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Movieland. All rights reserved.
+  </footer>
 </body>
 </html>
+

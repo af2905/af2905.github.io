@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Opening Movieland…</title>
-    <script>
-      // Supported routes
-      const SUPPORTED = ["movie", "tv", "person"];
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting to Movieland…</title>
+  <script>
+    const SUPPORTED = ["movie", "tv", "person"];
+    const pathname = window.location.pathname;
+    const parts = pathname.split("/").filter(Boolean);
+    const type = parts[0];
+    const id = parts[1];
 
-      const pathname = window.location.pathname; // e.g. /movie/123
-      const parts = pathname.split("/").filter(Boolean); // ["movie", "123"]
+    const fallback = "https://movieland.app";
+    const playStore = "https://play.google.com/store/apps/details?id=com.github.af2905.movieland";
 
-      const type = parts[0];
-      const id = parts[1];
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-      const fallback = "https://play.google.com/store/apps/details?id=com.github.af2905.movieland";
-
-      if (SUPPORTED.includes(type) && id) {
+    if (SUPPORTED.includes(type) && id) {
+      if (isAndroid) {
         const intentUrl = `intent://${type}/${id}#Intent;scheme=https;package=com.github.af2905.movieland;end`;
-
-        // Try to open app via intent
         window.location.replace(intentUrl);
 
-        // If not installed, redirect to Play Store
+        // Fallback if app is not installed
         setTimeout(() => {
-          window.location.href = fallback;
+          window.location.href = playStore;
         }, 1500);
       } else {
-        // Invalid URL – go to homepage or fallback
+        // iOS or Desktop → Landing page
         window.location.href = fallback;
       }
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to Movieland…</p>
-  </body>
+    } else {
+      // Invalid path → Home
+      window.location.href = fallback;
+    }
+  </script>
+</head>
+<body>
+<noscript>
+  JavaScript is required to open this page.
+</noscript>
+<p>Redirecting to Movieland…</p>
+</body>
 </html>

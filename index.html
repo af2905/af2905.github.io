@@ -1,247 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Movieland — Discover & Track Movies and TV Shows</title>
-  <meta name="description" content="Track trending movies & TV shows, manage your watchlist, and customize your movie experience with Movieland." />
-  <meta name="keywords" content="movies, tv shows, watchlist, trending, film, movieland app" />
-  <meta name="author" content="Movieland" />
-  <meta property="og:title" content="Movieland — Discover & Track Movies and TV Shows" />
-  <meta property="og:description" content="Explore trending content, cast details, and create your watchlist with Movieland." />
-  <meta property="og:image" content="https://movieland.app/assets/ic_app_launcher.png" />
-  <meta property="og:url" content="https://movieland.app" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movieland — Discover & Track Movies and TV Shows</title>
+    <meta name="description"
+          content="Track trending movies & TV shows, manage your watchlist, and customize your movie experience with Movieland."/>
+    <meta name="keywords" content="movies, tv shows, watchlist, trending, film, movieland app"/>
+    <meta name="author" content="Movieland"/>
+    <meta property="og:title" content="Movieland — Discover & Track Movies and TV Shows"/>
+    <meta property="og:description"
+          content="Explore trending content, cast details, and create your watchlist with Movieland."/>
+    <meta property="og:image" content="https://movieland.app/assets/ic_app_launcher.png"/>
+    <meta property="og:url" content="https://movieland.app"/>
+    <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QM58B8KKNF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QM58B8KKNF');
-  </script>
-  <!-- End Google Analytics -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QM58B8KKNF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QM58B8KKNF');
+    </script>
+    <!-- End Google Analytics -->
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #fdfdfd;
-      color: #222;
-    }
-    header {
-      display: flex;
-      padding: 2rem;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .header-left {
-      display: flex;
-      gap: 1.5rem;
-      align-items: stretch;
-      flex: 1;
-    }
-    .app-icon {
-      height: 144px;
-      width: auto;
-      object-fit: contain;
-    }
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .header-text h1 {
-      font-size: 2rem;
-      margin: 0;
-    }
-    .header-text p {
-      margin: 0.5rem 0 0;
-      color: #666;
-    }
-    .store-buttons img {
-      height: 48px;
-      margin-top: 1rem;
-    }
-    .features {
-      padding: 2rem;
-      background: #fff;
-    }
-    .features h2 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      color: #222;
-    }
-    .feature-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-    .feature-item {
-      background: #fafafa;
-      padding: 1rem;
-      border: 1px solid #eee;
-      border-radius: 8px;
-    }
-    .feature-item::before {
-      content: '✅';
-      margin-right: 0.5rem;
-    }
-    .screenshots {
-      padding: 2rem;
-    }
-    .screenshots h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .screenshot-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .screenshot-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      object-fit: cover;
-    }
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          margin: 0;
+          background: #fdfdfd;
+          color: #222;
+        }
+        header {
+          display: flex;
+          padding: 2rem;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+        .header-left {
+          display: flex;
+          gap: 1.5rem;
+          align-items: stretch;
+          flex: 1;
+        }
+        .app-icon {
+          height: 144px;
+          width: auto;
+          object-fit: contain;
+        }
+        .header-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .header-text h1 {
+          font-size: 2rem;
+          margin: 0;
+        }
+        .header-text p {
+          margin: 0.5rem 0 0;
+          color: #666;
+        }
+        .store-buttons img {
+          height: 48px;
+          margin-top: 1rem;
+        }
+        .features {
+          padding: 2rem;
+          background: #fff;
+        }
+        .features h2 {
+          font-size: 1.75rem;
+          margin-bottom: 1rem;
+          color: #222;
+        }
+        .feature-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 1rem;
+        }
+        .feature-item {
+          background: #fafafa;
+          padding: 1rem;
+          border: 1px solid #eee;
+          border-radius: 8px;
+        }
+        .feature-item::before {
+          content: '✅';
+          margin-right: 0.5rem;
+        }
+        .screenshots {
+          padding: 2rem;
+        }
+        .screenshots h2 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+        .screenshot-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+        .screenshot-grid img {
+          width: 100%;
+          height: auto;
+          border-radius: 12px;
+          border: 1px solid #ccc;
+          object-fit: cover;
+        }
 
-    .reviews {
-      padding: 2rem;
-      background: #fff;
-    }
-    .reviews h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .review-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-    .review-item {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 1rem;
-      font-size: 0.95rem;
-      color: #333;
-    }
-    .review-item .stars {
+        .reviews {
+          padding: 2rem;
+          background: #fff;
+        }
+        .reviews h2 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+        .review-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 1rem;
+        }
+        .review-item {
+          background: #fafafa;
+          border: 1px solid #eee;
+          border-radius: 8px;
+          padding: 1rem;
+          font-size: 0.95rem;
+          color: #333;
+        }
+        .review-item .stars {
+          color: #f5b301;
+          font-size: 1.2rem;
+          margin: 0 0 0.5rem;
+        }
+
+        .stars {
       color: #f5b301;
-      font-size: 1.2rem;
-      margin: 0 0 0.5rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      font-size: 1.1rem;
     }
 
-    .seo-text {
-      padding: 2rem;
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #888;
-    }
-    @media (max-width: 600px) {
-      .header-left {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .app-icon {
-        height: auto;
-        width: 96px;
-      }
-    }
-  </style>
+
+        .seo-text {
+          padding: 2rem;
+          font-size: 1rem;
+          color: #444;
+          line-height: 1.6;
+        }
+        footer {
+          text-align: center;
+          padding: 2rem;
+          color: #888;
+        }
+        @media (max-width: 600px) {
+          .header-left {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .app-icon {
+            height: auto;
+            width: 96px;
+          }
+        }
+    </style>
 </head>
 <body>
 <header>
-  <div class="header-left">
-    <img src="./assets/ic_app_launcher.png" alt="Movieland Icon" class="app-icon" />
-    <div class="header-text">
-      <h1>Movieland</h1>
-      <p>Track trending movies & TV shows, manage your watchlist, and customize themes!</p>
-      <div class="store-buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.github.af2905.movieland" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Get it on Google Play">
-        </a>
-      </div>
+    <div class="header-left">
+        <img src="./assets/ic_app_launcher.png" alt="Movieland Icon" class="app-icon"/>
+        <div class="header-text">
+            <h1>Movieland</h1>
+            <p>Track trending movies & TV shows, manage your watchlist, and customize themes!</p>
+            <div class="store-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.github.af2905.movieland"
+                   target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png"
+                         alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </header>
 
 <section class="features">
-  <h2>Key Features</h2>
-  <div class="feature-list">
-    <div class="feature-item">Discover Trending Movies & TV Shows – Stay updated with the latest releases.</div>
-    <div class="feature-item">Create Your Watchlist – Save movies & shows you want to watch later.</div>
-    <div class="feature-item">Explore Cast & Crew Details – Learn more about your favorite celebrities.</div>
-    <div class="feature-item">Browse by Genre – Find movies & shows from different categories.</div>
-    <div class="feature-item">Customize Your Theme – Choose from multiple theme colors & modes.</div>
-    <div class="feature-item">Multi-Language Support – Available in 11+ languages including English, German, Spanish, and more.</div>
-  </div>
+    <h2>Key Features</h2>
+    <div class="feature-list">
+        <div class="feature-item">Discover Trending Movies & TV Shows – Stay updated with the latest
+            releases.
+        </div>
+        <div class="feature-item">Create Your Watchlist – Save movies & shows you want to watch
+            later.
+        </div>
+        <div class="feature-item">Explore Cast & Crew Details – Learn more about your favorite
+            celebrities.
+        </div>
+        <div class="feature-item">Browse by Genre – Find movies & shows from different categories.
+        </div>
+        <div class="feature-item">Customize Your Theme – Choose from multiple theme colors &
+            modes.
+        </div>
+        <div class="feature-item">Multi-Language Support – Available in 11+ languages including
+            English, German, Spanish, and more.
+        </div>
+    </div>
 </section>
 
 <section class="screenshots">
-  <h2>App Screenshots</h2>
-  <div class="screenshot-grid">
-    <img src="./assets/Screenshot_20250328_093945.png" alt="Home Screenshot">
-    <img src="./assets/Screenshot_20250328_094340.png" alt="Movie Detail Screenshot">
-    <img src="./assets/Screenshot_20250328_094435.png" alt="Movie Detail Screenshot">
-    <img src="./assets/Screenshot_20250328_095350.png" alt="Search Screenshot">
-    <img src="./assets/Screenshot_20250328_095501.png" alt="Watchlist Screenshot">
-    <img src="./assets/Screenshot_20250328_095734.png" alt="Person Detail Screenshot">
-    <img src="./assets/Screenshot_20250328_100021.png" alt="TV Show Detail Screenshot">
-  </div>
+    <h2>App Screenshots</h2>
+    <div class="screenshot-grid">
+        <img src="./assets/Screenshot_20250328_093945.png" alt="Home Screenshot">
+        <img src="./assets/Screenshot_20250328_094340.png" alt="Movie Detail Screenshot">
+        <img src="./assets/Screenshot_20250328_094435.png" alt="Movie Detail Screenshot">
+        <img src="./assets/Screenshot_20250328_095350.png" alt="Search Screenshot">
+        <img src="./assets/Screenshot_20250328_095501.png" alt="Watchlist Screenshot">
+        <img src="./assets/Screenshot_20250328_095734.png" alt="Person Detail Screenshot">
+        <img src="./assets/Screenshot_20250328_100021.png" alt="TV Show Detail Screenshot">
+    </div>
 </section>
 
 <section class="reviews">
-  <h2>What Users Are Saying</h2>
-  <div class="review-list">
-    <div class="review">
-      <div class="user">Manish M.</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <div class="text">Movieland makes it easier to find the right movies. The language support is amazing. Highly recommended!</div>
+    <h2>What Users Are Saying</h2>
+    <div class="feature-list">
+        <div class="feature-item">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <strong>Manish M.</strong>
+            <p>Movieland makes it easier to find the right movies. The language support is amazing.
+                Highly recommended!</p>
+        </div>
+        <div class="feature-item">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <strong>Farzad A.</strong>
+            <p>Easy to use with great features like a watchlist and cast info. A great choice for
+                movie lovers!</p>
+        </div>
+        <div class="feature-item">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <strong>Golam K.</strong>
+            <p>Search is super easy to use. Bookmarking is a bonus! Solid app overall.</p>
+        </div>
+        <div class="feature-item">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <strong>Rishi S.</strong>
+            <p>Smooth and user-friendly for discovering and exploring movies. Love the UI!</p>
+        </div>
+        <div class="feature-item">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <strong>Ahmed A.</strong>
+            <p>Great for movie fans! Comfortable and very helpful app experience.</p>
+        </div>
     </div>
-    <div class="review">
-      <div class="user">Farzad A.</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <div class="text">Easy to use with great features like a watchlist and cast info. A great choice for movie lovers!</div>
-    </div>
-    <div class="review">
-      <div class="user">Golam K.</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <div class="text">Search is super easy to use. Bookmarking is a bonus! Solid app overall.</div>
-    </div>
-    <div class="review">
-      <div class="user">Rishi S.</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <div class="text">Smooth and user-friendly for discovering and exploring movies. Love the UI!</div>
-    </div>
-    <div class="review">
-      <div class="user">Ahmed A.</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <div class="text">Great for movie fans! Comfortable and very helpful app experience.</div>
-    </div>
-  </div>
 </section>
 
 <section class="seo-text">
-  <p>
-    Movieland is the ultimate app for movie and TV lovers. Whether you're a casual viewer or a film fanatic,
-    this app helps you track what's trending, manage your watchlist, and discover top-rated content with ease.
-    Featuring a clean, user-friendly design and powerful features like cast exploration and genre filtering,
-    Movieland puts the entertainment world at your fingertips. Available in over 11 languages and customizable
-    with different color themes, Movieland is your personal companion for everything movies and TV shows.
-  </p>
+    <p>
+        Movieland is the ultimate app for movie and TV lovers. Whether you're a casual viewer or a
+        film fanatic,
+        this app helps you track what's trending, manage your watchlist, and discover top-rated
+        content with ease.
+        Featuring a clean, user-friendly design and powerful features like cast exploration and
+        genre filtering,
+        Movieland puts the entertainment world at your fingertips. Available in over 11 languages
+        and customizable
+        with different color themes, Movieland is your personal companion for everything movies and
+        TV shows.
+    </p>
 </section>
 
 <footer>
-  © 2023–2025 Movieland. All rights reserved.
+    © 2023–2025 Movieland. All rights reserved.
 </footer>
 </body>
 </html>
